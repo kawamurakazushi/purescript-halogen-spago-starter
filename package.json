@@ -1,0 +1,21 @@
+{
+  "name": "purescript-halogen-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kazushi Kawamura <wakaka2277@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "spago install && yarn bundle",
+    "bundle": "spago bundle-app --to assets/app.js",
+    "bundle:watch": "yarn bundle --watch",
+    "start:web": "parcel start assets/index.html",
+    "start": "npm-run-all -p bundle:watch start:web"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.3",
+    "purescript": "^0.13.3",
+    "purty": "^4.5.1",
+    "spago": "^0.9.0"
+  }
+}
